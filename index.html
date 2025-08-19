@@ -1,686 +1,431 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DTI LMS</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="./styles.css" />
+    <!-- font awesome -->
+    <link rel="stylesheet" href="./fontawesome-free-6.2.1-web/css/all.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>object-class-notes</title>
-  <!-- styles -->
-  <link rel="stylesheet" href="./styles.css" />
-  <!-- font awesome -->
-  <link rel="stylesheet" href="./fontawesome-free-6.2.1-web/css/all.css" />
-</head>
+  <body>
+    <!-- navigation button -->
+    <span class="nav-btn" id="nav-btn">
+      <i class="fa-solid fa-folder"></i>
+    </span>
 
-<body>
-  <!-- navigation button -->
-  <span class="nav-btn" id="nav-btn">
-    <i class="fa-solid fa-folder"></i>
-  </span>
-
-  <!-- navigation bar -->
-  <nav class="navbar" id="navbar">
-    <div class="navbar-header">
-      <!-- <span class="nav-close" id="nav-close">
+    <!-- navigation bar -->
+    <nav class="navbar" id="navbar">
+      <div class="navbar-header">
+        <!-- <span class="nav-close" id="nav-close">
         <i class="fas fa-times"></i>
       </span> -->
-    </div>
-    <ul class="nav-items">
-      <span class="navbar-links">Notes Navigator</span>
-      <br />
-      <li><a href="#introduction" class="nav-link">Introduction</a></li>
-      <li><a href="#object-class" class="nav-link">Object Class</a></li>
-      <li><a href="#tostring" class="nav-link">toString() Method</a></li>
-      <li>
-        <a href="#hashcode" class="nav-link">hashCode() Method</a>
-      </li>
-      <li><a href="#equals" class="nav-link">equals() Method</a></li>
-      <li><a href="#clone" class="nav-link">clone() Method</a></li>
-      <li>
-        <a href="#finalize" class="nav-link">finalize() Method</a>
-      </li>
-      <li><a href="#wait" class="nav-link">wait() Method</a></li>
-      <li><a href="#notify" class="nav-link">notify() Method</a></li>
-      <li>
-        <a href="#notify-all" class="nav-link">notifyAll() Method </a>
-      </li>
-      <span class="navbar-links">Resources Navigator</span>
-      <br />
-      <li><a href="./index.html" class="nav-link">notes</a></li>
-      <li><a href="./programs.html" class="nav-link">programs</a></li>
-      <li><a href="./points.html" class="nav-link">points</a></li>
-      <li><a href="./interview-qa.html" class="nav-link">interview QA</a></li>
-      <li>
-        <a href="./assignment-qa.html" class="nav-link">assignment QA</a>
-      </li>
-    </ul>
-  </nav>
-
-  <!-- main navigator -->
-  <header class="header-nav">
-    <div class="menu-btn">
-      <div class="btn-line"></div>
-      <div class="btn-line"></div>
-      <div class="btn-line"></div>
-    </div>
-
-    <nav class="menu">
-      <ul class="menu-nav">
-        <li class="nav-item current">
-          <a href="index.html" class="nav-link"> Language Fundamentals </a>
+      </div>
+      <ul class="nav-items">
+        <span class="navbar-links">Notes Navigator</span>
+        <br />
+        <li><a href="#introduction" class="nav-link">Introduction</a></li>
+        <li><a href="#object-class" class="nav-link">Object Class</a></li>
+        <li><a href="#tostring" class="nav-link">toString() Method</a></li>
+        <li>
+          <a href="#hashcode" class="nav-link">hashCode() Method</a>
         </li>
-        <li class="nav-item">
-          <a href="about.html" class="nav-link"> static-members </a>
+        <li><a href="#equals" class="nav-link">equals() Method</a></li>
+        <li><a href="#clone" class="nav-link">clone() Method</a></li>
+        <li>
+          <a href="#finalize" class="nav-link">finalize() Method</a>
         </li>
-        <li class="nav-item">
-          <a href="work.html" class="nav-link"> non-static-members </a>
+        <li><a href="#wait" class="nav-link">wait() Method</a></li>
+        <li><a href="#notify" class="nav-link">notify() Method</a></li>
+        <li>
+          <a href="#notify-all" class="nav-link">notifyAll() Method </a>
         </li>
-        <li class="nav-item">
-          <a href="contact.html" class="nav-link"> inheritence </a>
-        </li>
-        <li class="nav-item current">
-          <a href="index.html" class="nav-link"> scanner-class </a>
-        </li>
-        <li class="nav-item">
-          <a href="about.html" class="nav-link"> objects-count </a>
-        </li>
-        <li class="nav-item">
-          <a href="work.html" class="nav-link">
-            packages-and-access-levels
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="contact.html" class="nav-link"> encapsulation </a>
-        </li>
-        <li class="nav-item">
-          <a href="index.html" class="nav-link"> type-casting </a>
-        </li>
-        <li class="nav-item">
-          <a href="about.html" class="nav-link"> polymorphism </a>
-        </li>
-        <li class="nav-item">
-          <a href="work.html" class="nav-link"> super-this-in-methods </a>
-        </li>
-        <li class="nav-item">
-          <a href="./core_java/abstraction/index.html" class="nav-link"> abstraction </a>
-        </li>
-        <li class="nav-item">
-          <a href="index.html" class="nav-link"> interfaces </a>
-        </li>
-        <li class="nav-item">
-          <a href="about.html" class="nav-link"> command-line-arguments</a>
-        </li>
-        <li class="nav-item">
-          <a href="work.html" class="nav-link"> final-keyword </a>
-        </li>
-        <li class="nav-item">
-          <a href="contact.html" class="nav-link"> exception-handling </a>
-        </li>
-        <li class="nav-item current">
-          <a href="index.html" class="nav-link"> asserstion </a>
-        </li>
-        <li class="nav-item">
-          <a href="about.html" class="nav-link"> enum </a>
-        </li>
-        <li class="nav-item">
-          <a href="work.html" class="nav-link"> wrapper-classes </a>
-        </li>
-        <li class="nav-item">
-          <a href="contact.html" class="nav-link"> string </a>
-        </li>
-        <li class="nav-item current">
-          <a href="index.html" class="nav-link">
-            string-buffer-and-string-builder
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="about.html" class="nav-link"> multi-threads </a>
-        </li>
-        <li class="nav-item">
-          <a href="work.html" class="nav-link"> object class </a>
-        </li>
-        <li class="nav-item">
-          <a href="contact.html" class="nav-link"> Generics</a>
-        </li>
-        <li class="nav-item current">
-          <a href="index.html" class="nav-link"> collection API </a>
-        </li>
-        <li class="nav-item">
-          <a href="about.html" class="nav-link"> File Handling </a>
-        </li>
-        <li class="nav-item">
-          <a href="work.html" class="nav-link"> Annotations</a>
-        </li>
-        <li class="nav-item">
-          <a href="contact.html" class="nav-link"> Java 8.0 Features </a>
+        <span class="navbar-links">Resources Navigator</span>
+        <br />
+        <li><a href="./index.html" class="nav-link">notes</a></li>
+        <li><a href="./programs.html" class="nav-link">programs</a></li>
+        <li><a href="./points.html" class="nav-link">points</a></li>
+        <li><a href="./interview-qa.html" class="nav-link">interview QA</a></li>
+        <li>
+          <a href="./assignment-qa.html" class="nav-link">assignment QA</a>
         </li>
       </ul>
     </nav>
-  </header>
 
-  <!-- header -->
-  <header class="header">
-    <div class="banner">
-      <h1 class="banner-title">Object class in java notes</h1>
-    </div>
-  </header>
-
-  <!-- end of header -->
-  <!-- content-divider -->
-  <div class="content-divider"></div>
-  <!-- end of content divider -->
-
-  <!-- notes body start -->
-  <main class="main">
-    <section class="class-notes">
-      <!-- <h2 class="subject-title">Subject Title</h2> -->
-      <article class="topic">
-        <h3 class="topic-title" id="introduction">Introduction</h3>
-        <p class="topic-content">
-          The most commonly used and general-purpose classes required for any
-          Java program are grouped into a package known as "java.lang". All
-          the classes and interfaces available in this package are
-          automatically accessible to any Java program without needing to
-          import them explicitly.
-        </p>
-      </article>
-      <article class="topic">
-        <h3 class="topic-title">Object Class</h3>
-        <p class="topic-content">
-          The most common general methods applicable to any Java object are
-          defined in the Object class. The Object class serves as the parent
-          class of any Java class, whether directly or indirectly. Therefore,
-          all the methods defined in the Object class are automatically
-          available to any Java class. The Object class defines the following
-          11 methods:
-          <br />
-        </p>
-        <br />
-        <ol class="topic-list">
-          <li>
-            <b> clone()</b><br />
-            Creates a new object of the same class as this object.
-          </li>
-          <li>
-            <b> equals(Object)</b><br />
-            Compares two Objects for equality.
-          </li>
-          <li>
-            <b> finalize()</b><br />
-            Called by the garbage collector on an object when garbage
-            collection determines that there are no more references to the
-            object.
-          </li>
-          <li>
-            <b>getClass()</b><br />
-            Returns the runtime class of an object.
-          </li>
-          <li>
-            <b>hashCode()</b><br />
-            Returns a hash code value for the object.
-          </li>
-          <li>
-            <b>notify()</b><br />
-            Wakes up a single thread that is waiting on this object's monitor.
-          </li>
-          <li>
-            <b>notifyAll()</b><br />
-            Wakes up all threads that are waiting on this object's monitor.
-          </li>
-          <li>
-            <b>toString()</b><br />
-            Returns a string representation of the object.
-          </li>
-          <li>
-            <b>wait()</b><br />
-            Waits to be notified by another thread of a change in this object.
-          </li>
-          <li>
-            <b>wait(long)</b><br />
-            Waits to be notified by another thread of a change in this object.
-          </li>
-          <li>
-            <b> wait(long, int)</b><br />
-            Waits to be notified by another thread of a change in this object.
-          </li>
-        </ol>
-      </article>
-      <article class="topic">
-        <h3 class="topic-title" id="tostring">toString() Method</h3>
-        <p class="topic-content">
-          To return String representation of an object.
-        </p>
-        <pre>
-  public String toString()
-  {
-      return getClass.getName() + '@' + Integer.toHexString(HashCode);
-  }
-        </pre>
-        <br />
-        <pre>
-  class Student
-  {
-        String name;	
-        int rollno;
-	
-        Student(String name, int rollno)
-        {
-            this.name = name;
-            this.rollno = rollno;
-        }
-
-        public static void main(String arg[])
-        {
-            Student s1 = new Student("vijay", 101);
-            Student s2 = new Student("yash", 102);
-            System.out.println(s1); // Student@10b62c9
-            System.out.println(s2); // Student@82ba41
-        }
-  }
-          </pre>
-        <p class="topic-content">
-          When ever we are passing object reference as argument to s.o.p()
-          internally JVM will call toString() on that object. If we are not
-          providing toString() then Object class toString() will be executed
-          which is implemented as follows
-        </p>
-        <pre>
-  public String toString()
-  {
-      return getClass.getName() + '@' + Integer.toHexString(HashCode);
-  }
-        </pre>
-        <p class="topic-content">
-          Based on our requirement to provide our own String representation we
-          have to override toString(). If we are printing Student Object
-          reference to return name & roll no we have to override toString() as
-          follows:
-        </p>
-        <pre>
-  public String toString()
-  {
-      return name + "--------" + rollno;
-  }
-</pre>
-        <p class="topic-content">
-          It is highly recommended to override toString() in our classes.
-        </p>
-      </article>
-      <article class="topic">
-        <h3 class="topic-title" id="hashcode">hashCode() Method</h3>
-        <p class="topic-content">
-          The `hashCode` of an object represents a unique numerical value that
-          can be utilized by the JVM when storing or adding objects into
-          `HashSet`, `Hashtable`, or `HashMap`. The `hashCode()` method of the
-          `Object` class is implemented to return a hash code based on the
-          memory address of an object. However, according to our requirements,
-          we can override the `hashCode()` method to generate our own custom
-          hash codes.
-        </p>
-
-        <p class="topic-content">Case: 1</p>
-        <pre>
-  class Test
-  {
-      int i;    
-      Test(int i)
-      {
-          this.i = i;
-      }
-      public int hashCode()
-      {
-         return i;
-      }       
-      public static void main(String arg[])
-      {
-         Test t1 = new Test(100);
-         Test t2 = new Test(110);
-         System.out.println(t1); // Output: 100
-         System.out.println(t2); // Output: 110
-      }
-  }
-          </pre>
-        <p class="topic-content">Case: 2</p>
-        <pre>
-  class HashCodeDemo
-  {
-      int i;    
-
-      HashCodeDemo(int i)
-      {
-          this.i = i;
-      }
-
-      public int hashCode()
-      {
-          return i;
-      }  
-
-      public String toString()
-      { 
-          return i + "";
-      }
-
-      public static void main(String arg[])
-      {
-          HashCodeDemo h1 = new HashCodeDemo(100);
-          HashCodeDemo h2 = new HashCodeDemo(110);
-          System.out.println(h11); // Output: 100
-          System.out.println(h2); // Output: 110
-      }
-  }        
-        </pre>
-      </article>
-      <article class="topic">
-        <h3 class="topic-title" id="equals">equals() Method</h3>
-        <p class="topic-content">default without overriding</p>
-        <pre>
-  class Student
-  {
-      String name;
-      int rollno;
-
-      Student(String name,int rollno)
-      {
-          this.name = name;
-          this.rollno = rollno;
-      }
-
-      public static void main(String arg[])
-      {
-            Student s1 = new Student ("vijay", 101);
-            Student s2 = new Student ("yash", 102);
-            Student s3 = new Student ("yash", 102);
-            System.out.println(s1.equals(s2)); //false
-            System.out.println(s2.equals(s3)); //false
-      }
-  }
-          </pre>
-        <p class="topic-content">
-          r1 == r2 //reference Comparision. <br />
-          r1.equals(r2) //reference Comparision
-        </p>
-        <p class="topic-content">
-          <b>Note:</b> In this case Object class .equals() has executed which
-          is meant for reference comparison but based on our requirement it is
-          recommended to override .equals() for content comparison. By over
-          loading .equals() we have to consider the following 3 cases <br />
-          <b>Case1:</b> The meaning of equality <br />
-          <b>Case2:</b> In the case of heterogeneous objects we have to return
-          false. (i.e) we have to handle ClassCastException to return false.
-          <br />
-          <b>Case3:</b> If we are passing null as the argument we have return
-          false. (i.e) we have to handle NullPointerException to return false.
-        </p>
-        <br />
-        <p class="topic-content sub-heading">Overridden methods of equals</p>
-        <pre>
-  class Student
-  {
-      String name;
-      int rollno;
-
-      Student(String name,int rollno)
-      {
-          this.name = name;
-          this.rollno = rollno;
-      }
-
-      public boolean equals(Object obj)
-      {
-          try
-          {
-              String name1 = this.name;
-              int rollno1 = this.rollno;
-              Student s2 = (Student)obj;
-              String name2 = s2.name;
-              int rollno2 = s2.rollno;
-              if(name1.equals(name2) && rollno1 == rollno2)
-              {
-                  return true;
-              }
-              else
-              {
-                  return false;
-              }
-          }
-          catch (ClassCastException c)
-          {
-              return false;
-          }
-          catch (NullPointerException e)
-          {
-              return false;
-          }
-      }
-      public static void main(String arg[])
-      {
-          Student s1 = new Student ("vijay", 101);
-          Student s2 = new Student ("yash", 102);
-          Student s3 = new Student ("yash", 102);
-          System.out.println(s1.equals(s2)); // false
-          System.out.println(s2.equals(s3)); // true
-          System.out.println(s1.equals(null)); // false
-      }
-  }
-          </pre>
-      </article>
-
-      <article class="topic">
-        <h3 class="topic-title">
-          Comparison between ‘==’ operator and ‘.equals()’
-        </h3>
-        <table border="1" class="topic-content">
-          <tr>
-            <th>Comparison Point</th>
-            <th><code>==</code> Operator</th>
-            <th><code>.equals()</code> Method</th>
-          </tr>
-          <tr>
-            <td>1) Applicability</td>
-            <td>Applicable for both primitive and Object references.</td>
-            <td>Applicable for only Object references.</td>
-          </tr>
-          <tr>
-            <td>2) Meaning</td>
-            <td>
-              True if both references point to the same object on the heap
-              (reference comparison).
-            </td>
-            <td>
-              True if both references point to the same object on the heap
-              (reference comparison).
-            </td>
-          </tr>
-          <tr>
-            <td>3) Overriding</td>
-            <td>Cannot be overridden.</td>
-            <td>Can be overridden for content comparison.</td>
-          </tr>
-          <tr>
-            <td>4) Incompatibility</td>
-            <td>
-              Results in compile-time error if references are incompatible.
-            </td>
-            <td>
-              Returns <code>false</code> if references are incompatible.
-            </td>
-          </tr>
-          <tr>
-            <td>5) <code>null</code> Check</td>
-            <td>
-              Returns <code>false</code> for any Object reference compared to
-              <code>null</code>.
-            </td>
-            <td>
-              Returns <code>false</code> for any Object reference compared to
-              <code>null</code>.
-            </td>
-          </tr>
-        </table>
-      </article>
-      <article class="topic">
-        <h3 class="topic-title">Relationship between ‘==’ and .equals()</h3>
-        <p class="topic-content">
-          If r1 == r2 is true then r1.equals(r2) is always true. <br />
-          If r1.equals(r2) is true, then r1 == r2 need not to be true.
-        </p>
-      </article>
-      <article class="topic">
-        <h3 class="topic-title">Contract Between .equals() and hashCode()</h3>
-        <ol class="topic-content topic-list">
-          <li>
-            If two objects are equal by <code>.equals()</code>, then their
-            hash codes must be equal.
-          </li>
-          <p>
-            Example: If <code>r1.equals(r2)</code> is true, then
-            <code>r1.hashCode() == r2.hashCode()</code> is also true.
-          </p>
-          <li>
-            If two objects are not equal by <code>.equals()</code>, then their
-            hash codes may or may not be the same.
-          </li>
-          <li>
-            If the hash codes of two objects are equal, then the objects may
-            or may not be equal by <code>.equals()</code>.
-          </li>
-          <li>
-            If the hash codes of two objects are not equal, then the objects
-            are always not equal by <code>.equals()</code>.
-          </li>
-        </ol>
-        <p class="topic-content">
-          To satisfy above contract when ever we are overriding .equals it is
-          highly recommended to override hashCode() also.
-        </p>
-      </article>
-      <article class="topic">
-        <h3 class="topic-title" id="clone">clone() Method</h3>
-        <p class="topic-content">
-          The process of creating exactly duplicate Object is called Clonning.
-          Object class contains the clone method to perform this <br />
-          <i>
-            protected native Object clone() throws
-            CloneNotSupportedException</i>
-          <br />In a subclass that implements the Cloneable Interface, it is
-          expected to override the clone() method of the Object class. This
-          method is utilized for creating a clone, essentially a duplicate of
-          the object along with its member variable values, using the syntax
-          aobj.clone(). If a class fails to implement the Cloneable interface,
-          attempting this process results in a thrown
-          CloneNotSupportedException.
-        </p>
-        <pre>
-  class Test implements Cloneable
-  {
-      int i = 10;
-      int j = 20;
-      public static void main(String arg[])throws CloneNotSupportedException
-      {
-          Test t1 = new Test();
-          Test t2 = (Test)t1.clone();
-          t1.i = 100;
-          t1.j = 200;
-          System.out.println(t2.i + "----" + t2.j); // 10----20
-      }
-  }
-          </pre>
-        <p class="topic-content">
-          All the Objects can’t have the capability to produce cloned Objects.
-          Only clonaeble objects having that capability. <br />
-          An Object is said to be cloneable iff the corresponding class has to
-          implement java.lang.cloneable interface. <br />
-          It doesn’t contain any methods it is a marker interface. <br />
-          Protected members can be accessible from outside package in the
-          child classes but we should invoke them by using child class
-          reference only. That is parent class reference is not allowed to
-          invoke protected members from outside package.
-        </p>
-        <pre>
-class Test implements Cloneable
-{
-    public static void main(String arg[])throws CloneNotSupportedException
-    {
-        Object o = new Object(); //Case1: 
-        Object o2 = o.clone();
-        Object o = new Test(); //Case2:
-        Object o2 = o.clone();
-        Test t = new Test(); //Case3: 
-        Object o = t.clone();
-    }
-}
-
-          </pre>
-        <p class="topic-content">
-          It is highly recommended to override clone() in our class like
-          doGet(), doPost() methods.
-        </p>
-      </article>
-      <article class="topic">
-        <h3 class="topic-title" id="finalize">finalize() Method</h3>
-        <p class="topic-content">
-          The garbage collector triggers the finalize() method when removing
-          an object from memory, specifically when there are no remaining
-          references to that object.
-        </p>
-      </article>
-      <article class="topic">
-        <h3 class="topic-title" id="wait">wait() Method</h3>
-        <p class="topic-content">
-          By using this technique, the current thread is made to wait for a
-          notification from another thread. Within the function, you must
-          provide the time in milliseconds for which the thread will remain in
-          this waiting state.
-        </p>
-      </article>
-      <article class="topic">
-        <h3 class="topic-title" id="notify">notify() Method</h3>
-        <p class="topic-content">
-          By using this technique, notifications are sent to a single thread
-          at a time, waking it up while it is waiting for a certain item.
-        </p>
-      </article>
-      <article class="topic">
-        <h3 class="topic-title" id="notify-all">notifyAll() Method</h3>
-        <p class="topic-content">
-          This function awakens all threads that are currently waiting for an
-          object and sends notifications to all threads at the same time.
-        </p>
-      </article>
-      <!-- Add more articles for other topics -->
-    </section>
-  </main>
-  <!-- notes body end -->
-
-  <!-- content-divider -->
-  <div class="content-divider"></div>
-  <!-- end of content divider -->
-  <!-- footer section -->
-  <footer class="footer">
-    <div class="section-center">
-      <div class="social-icons">
-        <!-- social icon -->
-        <a href="#" class="social-icon">
-          <i class="fa-brands fa-square-facebook"></i>
-        </a>
-        <!-- social icon -->
-        <a href="#" class="social-icon">
-          <i class="fa-brands fa-square-twitter"></i>
-        </a>
-        <!-- social icon -->
-        <a href="#" class="social-icon">
-          <i class="fa-brands fa-square-instagram"></i>
-        </a>
-        <!-- end of social icon -->
+    <!-- main navigator -->
+    <header class="header-nav">
+      <div class="menu-btn">
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
       </div>
-      <p class="footer-text">
-        &copy; <span class="text-primary">vijays programming 2024</span> all
-        rights reserved
-      </p>
-    </div>
-  </footer>
-  <script src="./app.js"></script>
-</body>
 
+      <nav class="menu">
+        <ul class="menu-nav">
+          <li class="nav-item current">
+            <a href="index.html" class="nav-link"> Language Fundamentals </a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link"> static-members </a>
+          </li>
+          <li class="nav-item">
+            <a href="work.html" class="nav-link"> non-static-members </a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link"> inheritence </a>
+          </li>
+          <li class="nav-item current">
+            <a href="index.html" class="nav-link"> scanner-class </a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link"> objects-count </a>
+          </li>
+          <li class="nav-item">
+            <a href="work.html" class="nav-link">
+              packages-and-access-levels
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link"> encapsulation </a>
+          </li>
+          <li class="nav-item">
+            <a href="index.html" class="nav-link"> type-casting </a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link"> polymorphism </a>
+          </li>
+          <li class="nav-item">
+            <a href="work.html" class="nav-link"> super-this-in-methods </a>
+          </li>
+          <li class="nav-item">
+            <a href="./core_java/abstraction/index.html" class="nav-link">
+              abstraction
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="index.html" class="nav-link"> interfaces </a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link"> command-line-arguments</a>
+          </li>
+          <li class="nav-item">
+            <a href="work.html" class="nav-link"> final-keyword </a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link"> exception-handling </a>
+          </li>
+          <li class="nav-item current">
+            <a href="index.html" class="nav-link"> asserstion </a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link"> enum </a>
+          </li>
+          <li class="nav-item">
+            <a href="work.html" class="nav-link"> wrapper-classes </a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link"> string </a>
+          </li>
+          <li class="nav-item current">
+            <a href="index.html" class="nav-link">
+              string-buffer-and-string-builder
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link"> multi-threads </a>
+          </li>
+          <li class="nav-item">
+            <a href="work.html" class="nav-link"> object class </a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link"> Generics</a>
+          </li>
+          <li class="nav-item current">
+            <a href="index.html" class="nav-link"> collection API </a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link"> File Handling </a>
+          </li>
+          <li class="nav-item">
+            <a href="work.html" class="nav-link"> Annotations</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link"> Java 8.0 Features </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- header -->
+    <header class="header">
+      <div class="banner">
+        <h1 class="banner-title">
+          <span style="font-weight: bolder; font-style: italic; font-size: 5rem"
+            >DTI</span
+          >
+          <span style="font-weight: bold; color: gold">LMS</span>
+        </h1>
+      </div>
+    </header>
+
+    <!-- end of header -->
+    <!-- content-divider -->
+    <div class="content-divider"></div>
+    <!-- end of content divider -->
+
+    <!-- notes body start -->
+    <main class="main">
+      <section class="class-notes">
+        <article
+          class="topic"
+          style="
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          "
+        >
+          <h3
+            class="topic-title"
+            id="introduction"
+            style="
+              color: #2c3e50;
+              font-size: 28px;
+              border-bottom: 2px solid #3498db;
+              padding-bottom: 10px;
+              margin-top: 0;
+            "
+          >
+            DTI LMS - Complete Learning Platform
+          </h3>
+          <p class="topic-content" style="line-height: 1.6; color: #34495e">
+            Welcome to DTI LMS, your all-in-one learning platform for Core Java,
+            Core Python, Spring Framework, Data Analytics, Data Science, and AI.
+            Our platform integrates comprehensive learning materials with
+            practical applications to help you master these technologies
+            efficiently.
+          </p>
+
+          <h4 style="color: #2980b9; font-size: 22px; margin-top: 30px">
+            Platform Features
+          </h4>
+          <ul style="list-style-type: none; padding: 0">
+            <li style="padding: 8px 0; border-bottom: 1px dashed #ddd">
+              <strong style="color: #16a085">Notes:</strong> Comprehensive study
+              materials for all technologies with examples and best practices.
+            </li>
+            <li style="padding: 8px 0; border-bottom: 1px dashed #ddd">
+              <strong style="color: #16a085">Interview QA:</strong> Curated
+              interview questions and answers from beginner to advanced levels.
+            </li>
+            <li style="padding: 8px 0; border-bottom: 1px dashed #ddd">
+              <strong style="color: #16a085">Exams:</strong> Assessment tools to
+              test your knowledge and track your progress.
+            </li>
+            <li style="padding: 8px 0; border-bottom: 1px dashed #ddd">
+              <strong style="color: #16a085">Points System:</strong> Earn
+              rewards and recognition as you progress through courses.
+            </li>
+            <li style="padding: 8px 0">
+              <strong style="color: #16a085">Programs:</strong> Practical coding
+              exercises and projects to apply your knowledge.
+            </li>
+          </ul>
+
+          <h4 style="color: #2980b9; font-size: 22px; margin-top: 30px">
+            Technologies We Cover
+          </h4>
+          <div
+            style="display: flex; flex-wrap: wrap; gap: 15px; margin: 20px 0"
+          >
+            <span
+              style="
+                background: #3498db;
+                color: white;
+                padding: 8px 15px;
+                border-radius: 20px;
+                font-size: 14px;
+              "
+              >Core Java</span
+            >
+            <span
+              style="
+                background: #3498db;
+                color: white;
+                padding: 8px 15px;
+                border-radius: 20px;
+                font-size: 14px;
+              "
+              >Core Python</span
+            >
+            <span
+              style="
+                background: #3498db;
+                color: white;
+                padding: 8px 15px;
+                border-radius: 20px;
+                font-size: 14px;
+              "
+              >Spring Framework</span
+            >
+            <span
+              style="
+                background: #3498db;
+                color: white;
+                padding: 8px 15px;
+                border-radius: 20px;
+                font-size: 14px;
+              "
+              >Data Analytics</span
+            >
+            <span
+              style="
+                background: #3498db;
+                color: white;
+                padding: 8px 15px;
+                border-radius: 20px;
+                font-size: 14px;
+              "
+              >Data Science</span
+            >
+            <span
+              style="
+                background: #3498db;
+                color: white;
+                padding: 8px 15px;
+                border-radius: 20px;
+                font-size: 14px;
+              "
+              >AI & Machine Learning</span
+            >
+            <span
+              style="
+                background: #3498db;
+                color: white;
+                padding: 8px 15px;
+                border-radius: 20px;
+                font-size: 14px;
+              "
+              >Full Stack Development</span
+            >
+          </div>
+
+          <h4 style="color: #2980b9; font-size: 22px; margin-top: 30px">
+            Learning Paths
+          </h4>
+          <div
+            style="
+              background: white;
+              border-radius: 8px;
+              padding: 20px;
+              margin: 20px 0;
+              box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            "
+          >
+            <h5 style="color: #e74c3c; margin-top: 0">
+              Java Full Stack Developer
+            </h5>
+            <p>
+              Master Java programming, Spring Framework, databases, and frontend
+              technologies to become a proficient full stack developer.
+            </p>
+          </div>
+
+          <div
+            style="
+              background: white;
+              border-radius: 8px;
+              padding: 20px;
+              margin: 20px 0;
+              box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            "
+          >
+            <h5 style="color: #e74c3c; margin-top: 0">Python Data Scientist</h5>
+            <p>
+              Learn Python programming, data analysis, visualization, machine
+              learning, and AI concepts to excel in data science roles.
+            </p>
+          </div>
+
+          <div
+            style="
+              background: white;
+              border-radius: 8px;
+              padding: 20px;
+              margin: 20px 0;
+              box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            "
+          >
+            <h5 style="color: #e74c3c; margin-top: 0">AI Engineer</h5>
+            <p>
+              Dive deep into artificial intelligence, neural networks, natural
+              language processing, and computer vision applications.
+            </p>
+          </div>
+
+          <h4 style="color: #2980b9; font-size: 22px; margin-top: 30px">
+            Getting Started
+          </h4>
+          <p style="line-height: 1.6; color: #34495e">
+            To begin your learning journey, select a technology path that aligns
+            with your career goals. Each path contains structured modules with
+            notes, practical examples, interview preparation materials, and
+            hands-on projects. Our points system will motivate you to complete
+            modules and track your progress against other learners.
+          </p>
+
+          <div
+            style="
+              background: #e8f4fc;
+              border-left: 4px solid #3498db;
+              padding: 15px;
+              margin: 25px 0;
+            "
+          >
+            <p style="margin: 0; font-style: italic; color: #2c3e50">
+              "DTI LMS provides everything you need to master in-demand
+              technologies in one place. Start learning today and advance your
+              career tomorrow!"
+            </p>
+          </div>
+        </article>
+      </section>
+    </main>
+    <!-- notes body end -->
+
+    <!-- content-divider -->
+    <div class="content-divider"></div>
+    <!-- end of content divider -->
+    <!-- footer section -->
+    <footer class="footer">
+      <div class="section-center">
+        <div class="social-icons">
+          <!-- social icon -->
+          <a href="#" class="social-icon">
+            <i class="fa-brands fa-square-facebook"></i>
+          </a>
+          <!-- social icon -->
+          <a href="#" class="social-icon">
+            <i class="fa-brands fa-square-twitter"></i>
+          </a>
+          <!-- social icon -->
+          <a href="#" class="social-icon">
+            <i class="fa-brands fa-square-instagram"></i>
+          </a>
+          <!-- end of social icon -->
+        </div>
+        <p class="footer-text">
+          &copy; <span class="text-primary">vijays programming 2024</span> all
+          rights reserved
+        </p>
+      </div>
+    </footer>
+    <script src="./app.js"></script>
+  </body>
 </html>
