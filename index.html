@@ -13,17 +13,13 @@
 
   <body>
     <!-- navigation button -->
-    <span class="nav-btn" id="nav-btn">
+    <!-- <span class="nav-btn" id="nav-btn">
       <i class="fa-solid fa-folder"></i>
-    </span>
+    </span> -->
 
     <!-- navigation bar -->
     <nav class="navbar" id="navbar">
-      <div class="navbar-header">
-        <!-- <span class="nav-close" id="nav-close">
-        <i class="fas fa-times"></i>
-      </span> -->
-      </div>
+      <div class="navbar-header"></div>
       <ul class="nav-items">
         <span class="navbar-links">Notes Navigator</span>
         <br />
@@ -65,40 +61,38 @@
 
       <nav class="menu">
         <ul class="menu-nav">
-          <li class="nav-item current">
-            <a href="index.html" class="nav-link"> Language Fundamentals </a>
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Core Java</a>
           </li>
           <li class="nav-item">
-            <a href="about.html" class="nav-link"> static-members </a>
+            <a href="about.html" class="nav-link">Core Python</a>
           </li>
           <li class="nav-item">
-            <a href="work.html" class="nav-link"> non-static-members </a>
+            <a href="work.html" class="nav-link">MySQL</a>
           </li>
           <li class="nav-item">
-            <a href="contact.html" class="nav-link"> inheritence </a>
-          </li>
-          <li class="nav-item current">
-            <a href="index.html" class="nav-link"> scanner-class </a>
+            <a href="contact.html" class="nav-link">JDBC</a>
           </li>
           <li class="nav-item">
-            <a href="about.html" class="nav-link"> objects-count </a>
+            <a href="index.html" class="nav-link">Spring and Hibernate</a>
           </li>
           <li class="nav-item">
-            <a href="work.html" class="nav-link">
-              packages-and-access-levels
-            </a>
+            <a href="about.html" class="nav-link">Django</a>
           </li>
           <li class="nav-item">
-            <a href="contact.html" class="nav-link"> encapsulation </a>
+            <a href="work.html" class="nav-link"> Flask </a>
           </li>
           <li class="nav-item">
-            <a href="index.html" class="nav-link"> type-casting </a>
+            <a href="contact.html" class="nav-link">Git</a>
           </li>
           <li class="nav-item">
-            <a href="about.html" class="nav-link"> polymorphism </a>
+            <a href="index.html" class="nav-link">HTML</a>
           </li>
           <li class="nav-item">
-            <a href="work.html" class="nav-link"> super-this-in-methods </a>
+            <a href="about.html" class="nav-link">CSS</a>
+          </li>
+          <li class="nav-item">
+            <a href="work.html" class="nav-link">Java Script</a>
           </li>
           <li class="nav-item">
             <a href="./core_java/abstraction/index.html" class="nav-link">
@@ -106,30 +100,30 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="index.html" class="nav-link"> interfaces </a>
+            <a href="index.html" class="nav-link">React</a>
           </li>
           <li class="nav-item">
-            <a href="about.html" class="nav-link"> command-line-arguments</a>
+            <a href="about.html" class="nav-link">Angular</a>
           </li>
           <li class="nav-item">
-            <a href="work.html" class="nav-link"> final-keyword </a>
+            <a href="work.html" class="nav-link">Docker</a>
           </li>
           <li class="nav-item">
-            <a href="contact.html" class="nav-link"> exception-handling </a>
-          </li>
-          <li class="nav-item current">
-            <a href="index.html" class="nav-link"> asserstion </a>
+            <a href="contact.html" class="nav-link">Kubernetics</a>
           </li>
           <li class="nav-item">
-            <a href="about.html" class="nav-link"> enum </a>
+            <a href="index.html" class="nav-link">Data Analytics</a>
           </li>
           <li class="nav-item">
-            <a href="work.html" class="nav-link"> wrapper-classes </a>
+            <a href="about.html" class="nav-link">AI & Machine Learning</a>
+          </li>
+          <li class="nav-item">
+            <a href="work.html" class="nav-link">Bootstrap</a>
           </li>
           <li class="nav-item">
             <a href="contact.html" class="nav-link"> string </a>
           </li>
-          <li class="nav-item current">
+          <li class="nav-item">
             <a href="index.html" class="nav-link">
               string-buffer-and-string-builder
             </a>
@@ -143,7 +137,7 @@
           <li class="nav-item">
             <a href="contact.html" class="nav-link"> Generics</a>
           </li>
-          <li class="nav-item current">
+          <li class="nav-item">
             <a href="index.html" class="nav-link"> collection API </a>
           </li>
           <li class="nav-item">
@@ -163,7 +157,7 @@
     <header class="header">
       <div class="banner">
         <h1 class="banner-title">
-          <span style="font-weight: bolder; font-style: italic; font-size: 5rem"
+          <span style="font-weight: bolder; font-style: italic; font-size: 3rem"
             >DTI</span
           >
           <span style="font-weight: bold; color: gold">LMS</span>
@@ -229,8 +223,8 @@
               test your knowledge and track your progress.
             </li>
             <li style="padding: 8px 0; border-bottom: 1px dashed #ddd">
-              <strong style="color: #16a085">Points System:</strong> Earn
-              rewards and recognition as you progress through courses.
+              <strong style="color: #16a085">Points</strong> All the points
+              related to a concept structured manner
             </li>
             <li style="padding: 8px 0">
               <strong style="color: #16a085">Programs:</strong> Practical coding
@@ -421,8 +415,14 @@
           <!-- end of social icon -->
         </div>
         <p class="footer-text">
-          &copy; <span class="text-primary">vijays programming 2024</span> all
-          rights reserved
+          &copy;
+          <span class="text-primary"
+            >Doctor Java Technologies
+            <script>
+              document.write(new Date().getFullYear());
+            </script>
+          </span>
+          all rights reserved
         </p>
       </div>
     </footer>
